@@ -28,4 +28,15 @@ public class MovieTest {
         assertEquals("The Lord of the Rings", movie.getTitle());
     }
 
+    @Test
+    public void testCanGetGenre() {
+        assertEquals("Adventure", movie.getGenre());
+    }
+
+    @Test
+    public void testCanSetGenre(){
+        movie.setGenre("Action");
+        assertEquals("Action", movie.getGenre());
+    }
+
 }
