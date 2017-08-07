@@ -16,7 +16,22 @@ public class Ranking {
         return this.rankings[index - 1];
     }
 
-    public void addMovie(Movie newMovie){
-        this.rankings[newMovie.getRanking()-1] = newMovie;
+    public int getIndex(Movie movieToFind){
+        int count = 0;
+        for(Movie movie: this.rankings){
+            if(movie == movieToFind){
+                return count;
+            }
+            count++;
+        }
+        return -1;
     }
+
+    public void addMovie(Movie newMovie){
+        this.rankings[newMovie.getRanking() - 1] = newMovie;
+    }
+
+//    public void movieUp(Movie movieToMove) {
+//
+//    }
 }

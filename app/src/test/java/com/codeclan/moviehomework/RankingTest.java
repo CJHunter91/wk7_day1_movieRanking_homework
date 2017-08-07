@@ -61,4 +61,14 @@ public class RankingTest {
         rankings.addMovie(newMovie);
         assertEquals(newMovie, rankings.getRanking(newMovie.getRanking()));
     }
+
+    @Test
+    public void canGetMovieIndex(){
+        assertEquals(9, rankings.getIndex(movie10));
+    }
+//    @Test
+//    public void canChangeMoviesRankingUp(){
+//        rankings.movieUp(movie10);
+//        assertEquals(movie10, rankings.getRanking(9));
+//    }
 }
