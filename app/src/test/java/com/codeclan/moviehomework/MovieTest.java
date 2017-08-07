@@ -39,4 +39,16 @@ public class MovieTest {
         assertEquals("Action", movie.getGenre());
     }
 
+    @Test
+
+    public void testCanGetRating(){
+        assertEquals(2, movie.getRating());
+    }
+
+    @Test
+    public void testCanSetRating(){
+        movie.setRating(1);
+        assertEquals(1, movie.getRating());
+    }
+
 }

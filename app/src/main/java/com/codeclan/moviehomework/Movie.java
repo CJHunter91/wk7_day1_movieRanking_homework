@@ -31,4 +31,12 @@ public class Movie{
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
 }
