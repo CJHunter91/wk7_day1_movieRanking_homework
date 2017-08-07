@@ -14,5 +14,5 @@ public class Ranking {
 
     public Movie getRanking(int index){
         return this.rankings[index - 1];
-    }
+    }   
 }

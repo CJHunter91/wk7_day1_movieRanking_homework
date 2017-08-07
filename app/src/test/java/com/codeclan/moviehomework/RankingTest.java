@@ -54,4 +54,11 @@ public class RankingTest {
     public void canGetRankingsMovieByIndex(){
         assertEquals(movie1, rankings.getRanking(1));
     }
+
+    @Test
+    public void canSetNewMovieAtEndOfRankings(){
+        Movie newMovie = new Movie("Robocop", "Action", 10);
+        rankings.addMovie(newMovie);
+        assertEquals(newMovie, rankings.getRanking(newMovie.getRanking()));
+    }
 }
