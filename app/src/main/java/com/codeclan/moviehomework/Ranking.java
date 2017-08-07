@@ -5,4 +5,12 @@ package com.codeclan.moviehomework;
  */
 
 public class Ranking {
+
+    private Movie[] rankings;
+
+    public Ranking(Movie[] currentRankings){
+        this.ranking = currentRankings;
+    }
+
+
 }
