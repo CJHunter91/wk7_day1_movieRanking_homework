@@ -42,13 +42,19 @@ public class MovieTest {
     @Test
 
     public void testCanGetRating(){
-        assertEquals(2, movie.getRating());
+        assertEquals(2, movie.getRanking());
     }
 
     @Test
-    public void testCanSetRating(){
-        movie.setRating(1);
-        assertEquals(1, movie.getRating());
+    public void testCanSetRanking(){
+        movie.setRanking(1);
+        assertEquals(1, movie.getRanking());
+    }
+
+    @Test
+    public void canGetToString(){
+        String expected = "Title: The Hobbit, Genre: Adventure, Ranking: 2";
+        assertEquals(expected, movie.toString());
     }
 
 }

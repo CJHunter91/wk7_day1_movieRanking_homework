@@ -32,11 +32,18 @@ public class Movie{
         this.genre = genre;
     }
 
-    public int getRating() {
+    public int getRanking() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRanking(int rating) {
         this.rating = rating;
+    }
+
+    public String toString(){
+        String sTitle = "Title: " + this.title;
+        String sGenre = "Genre: " + this.genre;
+        String sRating = "Ranking: " + Integer.toString(this.rating);
+        return sTitle + ", " + sGenre + ", " + sRating;
     }
 }
