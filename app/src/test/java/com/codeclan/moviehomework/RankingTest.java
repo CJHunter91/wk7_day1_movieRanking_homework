@@ -66,9 +66,16 @@ public class RankingTest {
     public void canGetMovieIndex(){
         assertEquals(9, rankings.getIndex(movie10));
     }
-//    @Test
-//    public void canChangeMoviesRankingUp(){
-//        rankings.movieUp(movie10);
-//        assertEquals(movie10, rankings.getRanking(9));
-//    }
+    @Test
+    public void canChangeMoviesRankingUp(){
+        rankings.movieUp(movie10);
+        assertEquals(movie10, rankings.getRanking(9));
+        assertEquals(movie9, rankings.getRanking(10));
+    }
+
+    @Test
+    public void canPrintRankingsList(){
+        System.out.println(rankings.toString());
+        assertNotNull(rankings.toString());
+    }
 }
