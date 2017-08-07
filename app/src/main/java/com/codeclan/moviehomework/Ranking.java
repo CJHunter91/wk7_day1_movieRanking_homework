@@ -14,5 +14,9 @@ public class Ranking {
 
     public Movie getRanking(int index){
         return this.rankings[index - 1];
-    }   
+    }
+
+    public void addMovie(Movie newMovie){
+        this.rankings[newMovie.getRanking()-1] = newMovie;
+    }
 }
