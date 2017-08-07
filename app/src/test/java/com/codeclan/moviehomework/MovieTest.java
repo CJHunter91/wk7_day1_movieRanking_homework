@@ -22,5 +22,10 @@ public class MovieTest {
         assertEquals("The Hobbit", movie.getTitle());
     }
 
+    @Test
+    public  void testCanSetTitle(){
+        movie.setTitle("The Lord of the Rings");
+        assertEquals("The Lord of the Rings", movie.getTitle());
+    }
 
 }
