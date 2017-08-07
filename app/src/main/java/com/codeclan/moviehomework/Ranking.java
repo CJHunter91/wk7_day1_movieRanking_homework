@@ -31,6 +31,7 @@ public class Ranking {
         this.rankings[newMovie.getRanking() - 1] = newMovie;
     }
 
+    @Override
     public String toString(){
         String output = "";
         int count = 1;
@@ -47,6 +48,8 @@ public class Ranking {
 
         this.rankings[prevPosition] = movieToReplace;
         this.rankings[prevPosition - 1] = movieToMove;
+        movieToReplace.setRanking(prevPosition);
+        movieToReplace.setRanking(prevPosition - 1);
 
     }
 }

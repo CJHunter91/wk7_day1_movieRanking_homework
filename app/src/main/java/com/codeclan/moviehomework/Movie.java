@@ -39,7 +39,7 @@ public class Movie{
     public void setRanking(int rating) {
         this.rating = rating;
     }
-
+    @Override
     public String toString(){
         String sTitle = "Title: " + this.title;
         String sGenre = "Genre: " + this.genre;

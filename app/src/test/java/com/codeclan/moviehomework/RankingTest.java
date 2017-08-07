@@ -79,4 +79,10 @@ public class RankingTest {
         System.out.println(rankings.toString());
         assertNotNull(rankings.toString());
     }
+    @Test void canChangeMovieRankingDown(){
+        System.out.println(rankings.toString());
+        rankings.movieChangeRanking(movie1, 1);
+        assertEquals(movie1, rankings.getRanking(2));
+        assertEquals(movie2, rankings.getRanking(1));
+    }
 }
