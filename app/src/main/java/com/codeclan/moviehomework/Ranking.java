@@ -9,8 +9,10 @@ public class Ranking {
     private Movie[] rankings;
 
     public Ranking(Movie[] currentRankings){
-        this.ranking = currentRankings;
+        this.rankings = currentRankings;
     }
 
-
+    public Movie getRanking(int index){
+        return this.rankings[index - 1];
+    }
 }
