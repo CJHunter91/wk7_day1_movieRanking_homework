@@ -31,6 +31,16 @@ public class Ranking {
         this.rankings[newMovie.getRanking() - 1] = newMovie;
     }
 
+    public String toString(){
+        String output = "";
+        int count = 1;
+        for(Movie movie: this.rankings){
+            output += Integer.toString(count)+ ": " + movie + "\n";
+            count++;
+        }
+        return output;
+    }
+
     public void movieUp(Movie movieToMove) {
         int prevPosition = this.getIndex(movieToMove);
         Movie movieToReplace = this.rankings[prevPosition - 1];

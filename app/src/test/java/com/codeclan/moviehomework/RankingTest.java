@@ -69,6 +69,7 @@ public class RankingTest {
     @Test
     public void canChangeMoviesRankingUp(){
         rankings.movieUp(movie10);
+        System.out.println(rankings.toString());
         assertEquals(movie10, rankings.getRanking(9));
         assertEquals(movie9, rankings.getRanking(10));
     }
