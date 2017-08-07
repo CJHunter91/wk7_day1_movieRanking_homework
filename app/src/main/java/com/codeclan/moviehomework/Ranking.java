@@ -43,13 +43,16 @@ public class Ranking {
     }
 
     public void movieChangeRanking(Movie movieToMove, int modifier) {
-        int prevPosition = this.getIndex(movieToMove);
-        Movie movieToReplace = this.rankings[prevPosition + modifier];
+        int movieToMoveIndex = this.getIndex(movieToMove);
+        
+        if(movieToMoveIndex + modifier > 0 && movieToMoveIndex + modifier < 9) {
+            int prevPosition = this.getIndex(movieToMove);
+            Movie movieToReplace = this.rankings[prevPosition + modifier];
 
-        this.rankings[prevPosition] = movieToReplace;
-        this.rankings[prevPosition + modifier] = movieToMove;
-        movieToReplace.setRanking(prevPosition);
-        movieToReplace.setRanking(prevPosition + modifier);
-
+            this.rankings[prevPosition] = movieToReplace;
+            this.rankings[prevPosition + modifier] = movieToMove;
+            movieToReplace.setRanking(prevPosition);
+            movieToReplace.setRanking(prevPosition + modifier);
+        }
     }
 }
