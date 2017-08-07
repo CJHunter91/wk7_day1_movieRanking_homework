@@ -42,14 +42,14 @@ public class Ranking {
         return output;
     }
 
-    public void movieUp(Movie movieToMove) {
+    public void movieChangeRanking(Movie movieToMove, int modifier) {
         int prevPosition = this.getIndex(movieToMove);
-        Movie movieToReplace = this.rankings[prevPosition - 1];
+        Movie movieToReplace = this.rankings[prevPosition + modifier];
 
         this.rankings[prevPosition] = movieToReplace;
-        this.rankings[prevPosition - 1] = movieToMove;
+        this.rankings[prevPosition + modifier] = movieToMove;
         movieToReplace.setRanking(prevPosition);
-        movieToReplace.setRanking(prevPosition - 1);
+        movieToReplace.setRanking(prevPosition + modifier);
 
     }
 }
